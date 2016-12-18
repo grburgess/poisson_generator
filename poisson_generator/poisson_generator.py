@@ -38,7 +38,7 @@ class PoissonEventGenerator(object):
             time = time - (1. / fmax) * np.log(np.random.rand())
             test = np.random.rand()
 
-            p_test = self._function(time) / fmax
+            p_test = self._function(time,*params) / fmax
 
             if test <= p_test:
                 arrival_times.append(time)
